@@ -75,7 +75,6 @@ const log = new Logger({
 })
 ```
 
-
 ### Reference
 
 For more details on the available class definitions, including all methods,
@@ -89,7 +88,7 @@ please see the TypeDoc
 
 ## Status
 
-The `@xpack/mock-console` module is fully functional and stable.
+The `@xpack/mock-console` module is currently under development.
 
 ## Tests
 
