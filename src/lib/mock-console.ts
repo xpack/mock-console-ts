@@ -107,7 +107,7 @@ export class MockConsole extends Console {
         encoding: BufferEncoding,
         callback: WritableCallback
       ): void => {
-        // console.log(chunk.toString(encoding))
+        // console.log(chunk.toString('utf-8'))
         assert(encoding as string === 'buffer')
         this.outBuffer += chunk.toString('utf-8')
 
@@ -147,7 +147,7 @@ export class MockConsole extends Console {
         encoding: BufferEncoding,
         callback: WritableCallback
       ): void => {
-        // console.log(chunk.toString(encoding))
+        // console.log(chunk.toString('utf-8'))
         assert(encoding as string === 'buffer')
         this.errBuffer += chunk.toString('utf-8')
 
