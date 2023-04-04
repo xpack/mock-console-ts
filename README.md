@@ -7,9 +7,6 @@
 This project provides a **TypeScript** Node.js **CommonJS**/**ES6** module
 with a mock console which logs to string arrays, for testing purposes.
 
-Note: Compatibility with legacy CommonJS is required until VS Code extensions
-will be updated to import ES6 modules.
-
 The open source project is hosted on GitHub as
 [xpack/mock-console-ts](https://github.com/xpack/mock-console-ts).
 
