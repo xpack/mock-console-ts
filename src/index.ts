@@ -15,5 +15,6 @@
 
 // Re-export the library definitions.
 export * from './lib/mock-console.js'
+export * from './lib/utils.js'
 
 // ----------------------------------------------------------------------------

@@ -15,9 +15,9 @@
   "module": "./esm/index.js",
   "types": "./cjs/index.d.ts",
   "scripts": {
-    "compile-watch": "tsc --build --verbose --watch src tests",
+    "compile-watch": "tsc --build --verbose --watch src",
     "fix": "ts-standard --fix src tests && standard esm",
-    "compile": "tsc --build --verbose src tests",
+    "compile": "tsc --build --verbose src",
     "npm-install": "npm install",
     "npm-link": "npm link",
     "npm-link-deps": "echo nop",
@@ -42,7 +42,7 @@
     "test": "npm run test-tap -s",
     "test-100": "npm run test-tap-coverage-100 -s",
     "test-100-c8": "npm run test-tap-coverage-100-c8 -s",
-    "dev-cycle": "npm run fix && npm run compile && npm run test",
+    "dev-cycle": "npm run fix && npm run compile && npm run test-100-c8",
     "typedoc": "typedoc --logLevel Verbose",
     "clean": "del-cli docs cjs 'tests/**/cjs' 'src/**/*.d.ts' 'src/**/*.d.ts.map' 'src/**/*.js' 'src/**/*.js.map' 'tests/**/*.d.ts' 'tests/**/*.d.ts.map' 'tests/**/*.js' 'tests/**/*.js.map' '**/tsconfig.tsbuildinfo' .nyc_output coverage",
     "deep-clean": "npm run clean && rm -rf node_modules package-lock.json",
@@ -86,7 +86,8 @@
     "check-coverage": false,
     "coverage": false,
     "files": [
-      "tests/tap/010-mock-console.ts"
+      "tests/tap/010-mock-console.ts",
+      "tests/tap/020-utils.ts"
     ],
     "node-arg": [
       "--loader=ts-node/esm"

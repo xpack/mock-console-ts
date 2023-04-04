@@ -7,6 +7,6 @@
   "exclude": [
   ],
   "include": [
-    "./tap/*.ts"
+    "./mocks/*.ts"
   ]
 }
