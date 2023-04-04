@@ -36,15 +36,31 @@
  * to be used in the tests
  * - quoted, to make clear the line last character.
  *
- * Prefix each line with the line number, to help finding the index
- * to be used in the tests.
- *
  * @example
+ *
  * ```
  * import { dumpLines } from '@xpack/mock-console'
  *
  * dumpLines(mockConsole.outLines)
  * dumpLines(mockConsole.errLines)
+ * ```
+ *
+ * The output looks like:
+ *
+ * ```
+ *  1: 'Multiple first'
+ *  2: ''
+ *  3: 'Usage: xtest multi first [options...] [--first <int>] [--multi <name>]'
+ *  4: ''
+ *  5: 'Multi first options:'
+ *  6: '  --first <int>                          Multi first option (optional)'
+ *  7: ''
+ *  8: 'Multi options:'
+ *  9: '  --multi|-m <name>                      Multi option (optional)'
+ * 10: ''
+ * 11: 'Common options:'
+ * ```
+ *
  */
 export const dumpLines = (lines: string[]): void => {
   const scale = Math.ceil(Math.log10(lines.length))
