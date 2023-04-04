@@ -30,13 +30,67 @@ type WritableCallback = (error?: Error | null | undefined) => void
 
 // https://nodejs.org/docs/latest-v16.x/api/console.html
 
+/**
+ * @summary The **MockConsole** class implements a
+ *   Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
+ *   that logs the messages to arrays.
+ *
+ * @description
+ * During tests, it is necessary to check the output of various
+ * commands, and for this it is necessary to intercept the console
+ * output.
+ *
+ * This is done by constructing the `Console` object with two writable streams
+ * which store the output into local arrays of strings, one line at a
+ * time.
+ *
+ * If the messages contain `/n`, they are split into separate lines.
+ *
+ * The line terminators are not stored in the arrays.
+ *
+ * UTF-8 encodings are used for multi-character strings.
+ *
+ * The arrays are available as public members (`outLines` for the
+ * standard output and `errLines` for the standard error).
+ */
 export class MockConsole extends Console {
+  /**
+   * Array of strings with the lines written on `stdout`.
+   *
+   * @example
+   * ```javascript
+   * t.ok(mockConsole.outLines.length > 0, 'has stdout')
+   * t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
+   * ```
+   */
   public outLines: string[] = []
+  /**
+   * Array of strings with the lines written on `stderr`.
+   *
+   * @example
+   * ```javascript
+   * t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
+   * ```
+   */
   public errLines: string[] = []
 
   protected outBuffer = ''
   protected errBuffer = ''
 
+  /**
+   * @summary Create a **MockConsole** instance.
+   *
+   * @description
+   * The constructor has no parameters.
+   *
+   * It creates the two writable streams configured to decode `utf-8`
+   * strings.
+   *
+   * @example
+   * ```javascript
+   * const mockConsole = new MockConsole()
+   * ```
+   */
   constructor () {
     // https://nodejs.org/docs/latest-v16.x/api/stream.html#simplified-construction
     const ostream = new Writable({
@@ -125,6 +179,18 @@ export class MockConsole extends Console {
     })
   }
 
+  /**
+   * @summary Clear the console internal status
+   *
+   * @description
+   * Clear the content of the internal arrays and the content of the
+   * parent **Console**.
+   *
+   * @example
+   * ```javascript
+   * mockConsole.clear()
+   * ```
+   */
   override clear (): void {
     super.clear()
 

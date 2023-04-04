@@ -67,12 +67,22 @@ The typical use case is to create an instance of the `Logger` object,
 then log messages at different levels:
 
 ```javascript
-const mockConsole: MockConsole = new MockConsole()
+const mockConsole = new MockConsole()
 
 const log = new Logger({
   level: 'info',
   console: mockConsole
 })
+```
+
+The logged lines are available in the `outLines` and
+`errLines` public members:
+
+```javascript
+t.ok(mockConsole.outLines.length > 0, 'has stdout')
+t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
+
+t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 ```
 
 ### Reference
