@@ -63,6 +63,7 @@
  *
  */
 export const dumpLines = (lines: string[]): void => {
+  console.log()
   const scale = Math.ceil(Math.log10(lines.length))
   for (let i = 0; i < lines.length; ++i) {
     const paddedIndex: string = (i.toString()).padStart(scale, ' ')
