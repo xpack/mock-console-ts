@@ -67,8 +67,8 @@ then log messages at different levels:
 const mockConsole = new MockConsole()
 
 const log = new Logger({
-  level: 'info',
-  console: mockConsole
+  console: mockConsole,
+  level: 'info'
 })
 ```
 
