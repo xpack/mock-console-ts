@@ -13,7 +13,7 @@
 
 // ----------------------------------------------------------------------------
 
-/**
+/*
  * A mock console that stores the lines into string arrays.
  */
 
