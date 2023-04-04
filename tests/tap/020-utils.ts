@@ -44,9 +44,10 @@ await test('dumpLines', (t) => {
 
   // globalConsole.log(mockConsole.outLines)
 
-  t.equal(mockConsole.outLines.length, 10, 'outLines has 10 lines')
-  t.equal(mockConsole.outLines[0], '0: \'one\'', 'first line is one')
-  t.equal(mockConsole.outLines[9], '9: \'ten\'', 'tenth line is ten')
+  t.equal(mockConsole.outLines.length, 11, 'outLines has 11 lines')
+  t.equal(mockConsole.outLines[0], '', 'start with empty line')
+  t.equal(mockConsole.outLines[1], '0: \'one\'', 'first line is one')
+  t.equal(mockConsole.outLines[10], '9: \'ten\'', 'tenth line is ten')
   t.equal(mockConsole.errLines.length, 0, 'errLines is empty')
 
   mockConsole.clear()
@@ -57,9 +58,10 @@ await test('dumpLines', (t) => {
 
   // globalConsole.log(mockConsole.outLines)
 
-  t.equal(mockConsole.outLines.length, 11, 'outLines has 11 lines')
-  t.equal(mockConsole.outLines[0], ' 0: \'one\'', 'first line is one')
-  t.equal(mockConsole.outLines[10], '10: \'eleven\'', 'eleventh line is eleven')
+  t.equal(mockConsole.outLines.length, 12, 'outLines has 11 lines')
+  t.equal(mockConsole.outLines[0], '', 'start with empty line')
+  t.equal(mockConsole.outLines[1], ' 0: \'one\'', 'first line is one')
+  t.equal(mockConsole.outLines[11], '10: \'eleven\'', 'eleventh line is eleven')
   t.equal(mockConsole.errLines.length, 0, 'errLines is empty')
 
   t.end()
