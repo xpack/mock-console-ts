@@ -82,6 +82,16 @@ t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
 t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 ```
 
+For debug purposes, there is also a function that can be used to display
+string arrays with the lines prefixed by a line number; this is useful
+in tests to decide what lines to check:
+
+```javascript
+import { dumpLines } from '@xpack/mock-console'
+
+dumpLines(mockConsole.outLines)
+```
+
 ### Reference
 
 For more details on the available class definitions, including all methods,
