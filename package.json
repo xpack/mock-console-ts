@@ -1,6 +1,6 @@
 {
   "name": "@xpack/mock-console",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "A Node.js CommonJS/ES6 module with a mock console",
   "type": "commonjs",
   "exports": {
