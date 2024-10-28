@@ -58,7 +58,7 @@ const mockConsole = new MockConsole()
 
 #### Defined in
 
-[src/lib/mock-console.ts:94](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L94)
+[src/lib/mock-console.ts:94](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L94)
 
 ## Properties
 
@@ -77,7 +77,7 @@ t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
 
 #### Defined in
 
-[src/lib/mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L66)
+[src/lib/mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L66)
 
 ***
 
@@ -95,7 +95,7 @@ t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 
 #### Defined in
 
-[src/lib/mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L75)
+[src/lib/mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L75)
 
 ***
 
@@ -119,7 +119,7 @@ node\_modules/@types/node/console.d.ts:68
 
 #### Defined in
 
-[src/lib/mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L77)
+[src/lib/mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L77)
 
 ***
 
@@ -129,7 +129,7 @@ node\_modules/@types/node/console.d.ts:68
 
 #### Defined in
 
-[src/lib/mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L78)
+[src/lib/mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L78)
 
 ## Methods
 
@@ -160,7 +160,7 @@ mockConsole.clear()
 
 #### Defined in
 
-[src/lib/mock-console.ts:194](https://github.com/xpack/mock-console-ts/blob/e4c04750a34e77a5c38cd0c72ab7a8d097cf1bad/src/lib/mock-console.ts#L194)
+[src/lib/mock-console.ts:194](https://github.com/xpack/mock-console-ts/blob/0e88f99cfb8ba252283d14b56a8bf36587c8ad95/src/lib/mock-console.ts#L194)
 
 ***
 
