@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: npm --prefix website install
 
-      - name: Generate TypeDocs
+      - name: Generate Doxygen
         run: npm --prefix website run build
 
       - name: Setup Pages
