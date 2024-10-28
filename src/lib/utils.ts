@@ -24,15 +24,16 @@
 // ============================================================================
 
 /**
- * @summary Dump numbered lines
+ * Dump numbered lines
  *
  * @param lines An array of strings.
  *
- * @description
+ * @remarks
  * Dump the content of the array, one line at a time, via `console.log()`.
  *
  * The lines are:
- * - prefixed with the line number, to help finding the index
+ * - preceded by an empty line
+ * - suffixed with the line number, to help finding the index
  * to be used in the tests
  * - quoted, to make clear the line last character.
  *
@@ -48,26 +49,29 @@
  * The output looks like:
  *
  * ```
- *  1: 'Multiple first'
- *  2: ''
- *  3: 'Usage: xtest multi first [options...] [--first <int>] [--multi <name>]'
- *  4: ''
- *  5: 'Multi first options:'
- *  6: '  --first <int>                          Multi first option (optional)'
- *  7: ''
- *  8: 'Multi options:'
- *  9: '  --multi|-m <name>                      Multi option (optional)'
- * 10: ''
- * 11: 'Common options:'
+ * ''
+ * 'Multiple first' //  0
+ * '' // 1
+ * 'Usage: xtest multi first [options...] [--first <int>] [--multi <name>]' // 2
+ * '' // 3
+ * 'Multi first options:' // 4
+ * '  --first <int>                          Multi first option (optional)' // 5
+ * '' // 6
+ * 'Multi options:' // 7
+ * '  --multi|-m <name>                      Multi option (optional)' // 8
+ * '' // 9
+ * 'Common options:' // 10
  * ```
  *
  */
-export const dumpLines = (lines: string[]): void => {
-  console.log()
-  const scale = Math.ceil(Math.log10(lines.length))
+export const dumpLines = (lines?: string[]): void => {
+  if (lines === undefined) {
+    return
+  }
+  console.log() // Start with an empty line for better readability.
+
   for (let i = 0; i < lines.length; ++i) {
-    const paddedIndex: string = (i.toString()).padStart(scale, ' ')
-    console.log(`${paddedIndex}: '${lines[i] as string}'`)
+    console.log(`"${lines[i] as string}", // ${i.toString()}`)
   }
 }
 

@@ -31,11 +31,11 @@ type WritableCallback = (error?: Error | null | undefined) => void
 // https://nodejs.org/docs/latest-v16.x/api/console.html
 
 /**
- * @summary The **MockConsole** class implements a
+ * The **MockConsole** class implements a
  *   Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
  *   that logs the messages to arrays.
  *
- * @description
+ * @remarks
  * During tests, it is necessary to check the output of various
  * commands, and for this it is necessary to intercept the console
  * output.
@@ -78,9 +78,9 @@ export class MockConsole extends Console {
   protected errBuffer = ''
 
   /**
-   * @summary Create a **MockConsole** instance.
+   * Create a **MockConsole** instance.
    *
-   * @description
+   * @remarks
    * The constructor has no parameters.
    *
    * It creates the two writable streams configured to decode `utf-8`
@@ -180,9 +180,9 @@ export class MockConsole extends Console {
   }
 
   /**
-   * @summary Clear the console internal status
+   * Clear the console internal status
    *
-   * @description
+   * @remarks
    * Clear the content of the internal arrays and the content of the
    * parent **Console**.
    *
