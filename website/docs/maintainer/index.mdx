@@ -40,7 +40,7 @@ This page is designed for maintainers of the
 **xPack Mock Console**
 project and provides documentation on how to create new releases.
 
-<Prerequisites nodeMajorVersion="18"/>
+<Prerequisites nodeVersion="18.0.0" nodeVersionMajor="18"/>
 
 <GetProjectSources />
 
@@ -87,14 +87,7 @@ kept as a legacy CommonJS dependency.
 Keep:
 
 - [`@types/node`](https://www.npmjs.com/package/@types/node?activeTab=versions)
-  locked to the oldest supported node (^16.18.14)
-  [release](https://nodejs.org/download/release/) available for TypeScript.
-
-:::note[TODO]
-
-Clarify the above.
-
-:::
+  locked to latest that still matches the oldest supported node (18).
 
 ### Increase the version and update it in the top `package.json`
 

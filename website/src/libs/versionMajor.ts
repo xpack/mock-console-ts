@@ -12,10 +12,7 @@
  * be obtained from https://opensource.org/licenses/MIT/.
  */
 
-import customField from '@site/src/libs/customField';
-
-export default function getVersionMinor() {
-  // Remove from the beginning to the first dot and, in the remaining string
-  // from the first dot to the end.
-  return parseInt(customField('upstreamVersion').replace(/^[0-9]*[.]/, '').replace(/[.].*/, ''), 10);
+export default function getVersionMajor(version: string): number {
+  // Remove from the first dot to the end.
+  return parseInt(version.replace(/[.].*/, ''), 10);
 }

@@ -14,6 +14,6 @@
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function customField(name) {
+export default function customField(name: string): string {
   return useDocusaurusContext().siteConfig.customFields[name];
 }

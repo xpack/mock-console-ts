@@ -58,7 +58,7 @@ const mockConsole = new MockConsole()
 
 #### Defined in
 
-[src/lib/mock-console.ts:94](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L94)
+[src/lib/mock-console.ts:94](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L94)
 
 ## Properties
 
@@ -77,7 +77,7 @@ t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
 
 #### Defined in
 
-[src/lib/mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L66)
+[src/lib/mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L66)
 
 ***
 
@@ -95,7 +95,7 @@ t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 
 #### Defined in
 
-[src/lib/mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L75)
+[src/lib/mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L75)
 
 ***
 
@@ -109,7 +109,7 @@ t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:67
+node\_modules/@types/node/console.d.ts:68
 
 ***
 
@@ -119,7 +119,7 @@ node\_modules/@types/node/console.d.ts:67
 
 #### Defined in
 
-[src/lib/mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L77)
+[src/lib/mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L77)
 
 ***
 
@@ -129,7 +129,7 @@ node\_modules/@types/node/console.d.ts:67
 
 #### Defined in
 
-[src/lib/mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L78)
+[src/lib/mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L78)
 
 ## Methods
 
@@ -160,7 +160,7 @@ mockConsole.clear()
 
 #### Defined in
 
-[src/lib/mock-console.ts:194](https://github.com/xpack/mock-console-ts/blob/924a440d84cc00cd8248917760e99c0cbad75f8b/src/lib/mock-console.ts#L194)
+[src/lib/mock-console.ts:194](https://github.com/xpack/mock-console-ts/blob/b26e30c9ad442855f56dd389e439fc0b85ccd78a/src/lib/mock-console.ts#L194)
 
 ***
 
@@ -170,7 +170,8 @@ mockConsole.clear()
 
 `console.assert()` writes a message if `value` is [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) or omitted. It only
 writes a message and does not otherwise affect execution. The output always
-starts with `"Assertion failed"`. If provided, `message` is formatted using `util.format()`.
+starts with `"Assertion failed"`. If provided, `message` is formatted using
+[`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args).
 
 If `value` is [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy), nothing happens.
 
@@ -210,7 +211,7 @@ v0.1.101
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:88
+node\_modules/@types/node/console.d.ts:90
 
 ***
 
@@ -263,7 +264,7 @@ v8.3.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:128
+node\_modules/@types/node/console.d.ts:130
 
 ***
 
@@ -305,7 +306,7 @@ v8.3.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:146
+node\_modules/@types/node/console.d.ts:148
 
 ***
 
@@ -335,7 +336,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:151
+node\_modules/@types/node/console.d.ts:153
 
 ***
 
@@ -343,7 +344,7 @@ node\_modules/@types/node/console.d.ts:151
 
 > **dir**(`obj`, `options`?): `void`
 
-Uses `util.inspect()` on `obj` and prints the resulting string to `stdout`.
+Uses [`util.inspect()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilinspectobject-options) on `obj` and prints the resulting string to `stdout`.
 This function bypasses any custom `inspect()` function defined on `obj`.
 
 #### Parameters
@@ -366,7 +367,7 @@ v0.1.101
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:157
+node\_modules/@types/node/console.d.ts:159
 
 ***
 
@@ -395,7 +396,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:163
+node\_modules/@types/node/console.d.ts:165
 
 ***
 
@@ -405,7 +406,8 @@ node\_modules/@types/node/console.d.ts:163
 
 Prints to `stderr` with newline. Multiple arguments can be passed, with the
 first used as the primary message and all additional used as substitution
-values similar to [`printf(3)`](http://man7.org/linux/man-pages/man3/printf.3.html) (the arguments are all passed to `util.format()`).
+values similar to [`printf(3)`](http://man7.org/linux/man-pages/man3/printf.3.html)
+(the arguments are all passed to [`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args)).
 
 ```js
 const code = 5;
@@ -415,8 +417,10 @@ console.error('error', code);
 // Prints: error 5, to stderr
 ```
 
-If formatting elements (e.g. `%d`) are not found in the first string then `util.inspect()` is called on each argument and the resulting string
-values are concatenated. See `util.format()` for more information.
+If formatting elements (e.g. `%d`) are not found in the first string then
+[`util.inspect()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilinspectobject-options) is called on each argument and the
+resulting string values are concatenated. See [`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args)
+for more information.
 
 #### Parameters
 
@@ -438,7 +442,7 @@ v0.1.100
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:181
+node\_modules/@types/node/console.d.ts:186
 
 ***
 
@@ -446,7 +450,7 @@ node\_modules/@types/node/console.d.ts:181
 
 > **group**(...`label`): `void`
 
-Increases indentation of subsequent lines by spaces for `groupIndentation`length.
+Increases indentation of subsequent lines by spaces for `groupIndentation` length.
 
 If one or more `label`s are provided, those are printed first without the
 additional indentation.
@@ -469,7 +473,7 @@ v8.5.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:189
+node\_modules/@types/node/console.d.ts:194
 
 ***
 
@@ -497,7 +501,7 @@ v8.5.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:194
+node\_modules/@types/node/console.d.ts:199
 
 ***
 
@@ -505,7 +509,7 @@ node\_modules/@types/node/console.d.ts:194
 
 > **groupEnd**(): `void`
 
-Decreases indentation of subsequent lines by spaces for `groupIndentation`length.
+Decreases indentation of subsequent lines by spaces for `groupIndentation` length.
 
 #### Returns
 
@@ -521,7 +525,7 @@ v8.5.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:199
+node\_modules/@types/node/console.d.ts:204
 
 ***
 
@@ -551,7 +555,7 @@ v0.1.100
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:204
+node\_modules/@types/node/console.d.ts:209
 
 ***
 
@@ -561,7 +565,8 @@ node\_modules/@types/node/console.d.ts:204
 
 Prints to `stdout` with newline. Multiple arguments can be passed, with the
 first used as the primary message and all additional used as substitution
-values similar to [`printf(3)`](http://man7.org/linux/man-pages/man3/printf.3.html) (the arguments are all passed to `util.format()`).
+values similar to [`printf(3)`](http://man7.org/linux/man-pages/man3/printf.3.html)
+(the arguments are all passed to [`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args)).
 
 ```js
 const count = 5;
@@ -571,7 +576,7 @@ console.log('count:', count);
 // Prints: count: 5, to stdout
 ```
 
-See `util.format()` for more information.
+See [`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args) for more information.
 
 #### Parameters
 
@@ -593,7 +598,7 @@ v0.1.100
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:221
+node\_modules/@types/node/console.d.ts:227
 
 ***
 
@@ -601,8 +606,8 @@ node\_modules/@types/node/console.d.ts:221
 
 > **table**(`tabularData`, `properties`?): `void`
 
-Try to construct a table with the columns of the properties of `tabularData`(or use `properties`) and rows of `tabularData` and log it. Falls back to just
-logging the argument if it can’t be parsed as tabular.
+Try to construct a table with the columns of the properties of `tabularData` (or use `properties`) and rows of `tabularData` and log it. Falls back to just
+logging the argument if it can't be parsed as tabular.
 
 ```js
 // These can't be parsed as tabular data
@@ -651,7 +656,7 @@ v10.0.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:253
+node\_modules/@types/node/console.d.ts:259
 
 ***
 
@@ -682,7 +687,7 @@ v0.1.104
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:261
+node\_modules/@types/node/console.d.ts:268
 
 ***
 
@@ -694,10 +699,10 @@ Stops a timer that was previously started by calling [time](MockConsole.md#time)
 prints the result to `stdout`:
 
 ```js
-console.time('100-elements');
-for (let i = 0; i < 100; i++) {}
-console.timeEnd('100-elements');
-// prints 100-elements: 225.438ms
+console.time('bunch-of-stuff');
+// Do a bunch of stuff.
+console.timeEnd('bunch-of-stuff');
+// Prints: bunch-of-stuff: 225.438ms
 ```
 
 #### Parameters
@@ -718,7 +723,7 @@ v0.1.104
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:274
+node\_modules/@types/node/console.d.ts:282
 
 ***
 
@@ -758,7 +763,7 @@ v10.7.0
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:289
+node\_modules/@types/node/console.d.ts:298
 
 ***
 
@@ -766,7 +771,8 @@ node\_modules/@types/node/console.d.ts:289
 
 > **trace**(`message`?, ...`optionalParams`?): `void`
 
-Prints to `stderr` the string `'Trace: '`, followed by the `util.format()` formatted message and stack trace to the current position in the code.
+Prints to `stderr` the string `'Trace: '`, followed by the [`util.format()`](https://nodejs.org/docs/latest-v18.x/api/util.html#utilformatformat-args)
+formatted message and stack trace to the current position in the code.
 
 ```js
 console.trace('Show me');
@@ -804,7 +810,7 @@ v0.1.104
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:310
+node\_modules/@types/node/console.d.ts:320
 
 ***
 
@@ -834,7 +840,7 @@ v0.1.100
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:315
+node\_modules/@types/node/console.d.ts:325
 
 ***
 
@@ -842,8 +848,16 @@ node\_modules/@types/node/console.d.ts:315
 
 > **profile**(`label`?): `void`
 
-This method does not display anything unless used in the inspector.
- Starts a JavaScript CPU profile with an optional label.
+This method does not display anything unless used in the inspector. The `console.profile()`
+method starts a JavaScript CPU profile with an optional label until [profileEnd](MockConsole.md#profileend)
+is called. The profile is then added to the Profile panel of the inspector.
+
+```js
+console.profile('MyLabel');
+// Some code
+console.profileEnd('MyLabel');
+// Adds the profile 'MyLabel' to the Profiles panel of the inspector.
+```
 
 #### Parameters
 
@@ -852,6 +866,10 @@ This method does not display anything unless used in the inspector.
 #### Returns
 
 `void`
+
+#### Since
+
+v8.0.0
 
 #### Inherited from
 
@@ -859,7 +877,7 @@ This method does not display anything unless used in the inspector.
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:321
+node\_modules/@types/node/console.d.ts:340
 
 ***
 
@@ -867,8 +885,11 @@ node\_modules/@types/node/console.d.ts:321
 
 > **profileEnd**(`label`?): `void`
 
-This method does not display anything unless used in the inspector.
- Stops the current JavaScript CPU profiling session if one has been started and prints the report to the Profiles panel of the inspector.
+This method does not display anything unless used in the inspector. Stops the current
+JavaScript CPU profiling session if one has been started and prints the report to the
+Profiles panel of the inspector. See [profile](MockConsole.md#profile) for an example.
+
+If this method is called without a label, the most recently started profile is stopped.
 
 #### Parameters
 
@@ -877,6 +898,10 @@ This method does not display anything unless used in the inspector.
 #### Returns
 
 `void`
+
+#### Since
+
+v8.0.0
 
 #### Inherited from
 
@@ -884,7 +909,7 @@ This method does not display anything unless used in the inspector.
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:326
+node\_modules/@types/node/console.d.ts:349
 
 ***
 
@@ -892,8 +917,8 @@ node\_modules/@types/node/console.d.ts:326
 
 > **timeStamp**(`label`?): `void`
 
-This method does not display anything unless used in the inspector.
- Adds an event with the label `label` to the Timeline panel of the inspector.
+This method does not display anything unless used in the inspector. The `console.timeStamp()`
+method adds an event with the label `'label'` to the Timeline panel of the inspector.
 
 #### Parameters
 
@@ -903,10 +928,14 @@ This method does not display anything unless used in the inspector.
 
 `void`
 
+#### Since
+
+v8.0.0
+
 #### Inherited from
 
 `Console.timeStamp`
 
 #### Defined in
 
-node\_modules/@types/node/console.d.ts:331
+node\_modules/@types/node/console.d.ts:355
