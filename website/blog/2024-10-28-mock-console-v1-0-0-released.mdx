@@ -19,11 +19,14 @@ tags:
 
 version: "1.0.0"
 
+release_tag_url: https://github.com/xpack/mock-console-ts/tree/v1.0.0
+
 ---
 
 import {PageMetadata} from '@docusaurus/theme-common';
 import Image from '@theme/IdealImage';
 import CodeBlock from '@theme/CodeBlock';
+import Link from '@docusaurus/Link';
 
 import Prerequisites from './_common/_prerequisites.mdx'
 import DownloadAnalytics from './_common/_download-analytics.mdx'
@@ -59,6 +62,10 @@ In JavaScript with CommonJS, use `require()`:
 ```javascript
 const { MockConsole } = request('@xpack/mock-console')
 ```
+
+## Source code
+
+- <Link to={frontMatter.release_tag_url}>GitHub tag v{frontMatter.version} tree</Link>
 
 ## Bug fixes
 
