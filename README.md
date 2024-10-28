@@ -12,6 +12,11 @@ For information on how to install and use this project,
 please refer to the
 [project web site](https://xpack.github.io/mock-console-ts/).
 
+## Project source
+
+The source code of the current release is available
+on GitHub <Link to="https://github.com/xpack/mock-console-ts/tree/v1.0.0">tag v1.0.0</Link>
+
 ## License
 
 Unless otherwise stated, the original content is released under the terms of the
