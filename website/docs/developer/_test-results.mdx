@@ -1,0 +1,89 @@
+
+import CodeBlock from '@theme/CodeBlock';
+
+import customField from '@site/src/libs/customField';
+
+{/* ------------------------------------------------------------------------ */}
+
+A typical test result looks like:
+
+<CodeBlock language="console"> {
+`% npm run test-100-c8
+
+> @xpack/mock-console@0.1.0 pretest-100-c8
+> npm run lint
+
+
+> @xpack/mock-console@0.1.0 lint
+> ts-standard src && standard esm
+
+
+> @xpack/mock-console@0.1.0 test-100-c8
+> npm run test-tap-coverage-100-c8 -s
+
+(node:31056) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
+(Use  \`node --trace-warnings ...\` to show where the warning was created)
+(node:31057) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
+(Use  \`node --trace-warnings ...\` to show where the warning was created)
+tests/tap/010-mock-console.ts ....................... 20/20
+tests/tap/020-utils.ts .............................. 12/12
+total ............................................... 32/32
+
+  32 passing (2s)
+
+  ok
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+------------------|---------|----------|---------|---------|-------------------
+All files         |     100 |      100 |     100 |     100 |
+src               |     100 |      100 |     100 |     100 |
+index.ts          |     100 |      100 |     100 |     100 |
+src/lib           |     100 |      100 |     100 |     100 |
+mock-console.ts   |     100 |      100 |     100 |     100 |
+utils.ts          |     100 |      100 |     100 |     100 |
+------------------|---------|----------|---------|---------|-------------------
+`} </CodeBlock>
+
+To run a specific test with more verbose output, use  \`npm run tap`:
+
+<CodeBlock language="console"> {
+`% npm run tap tests/tap/010-mock-console.ts
+Debugger attached.
+
+> @xpack/mock-console@0.1.0 tap
+> tap --reporter=spec tests/tap/010-mock-console.ts
+
+Debugger attached.
+
+Debugger attached.
+(node:31620) ExperimentalWarning: Custom ESM Loaders is an experimental feature and might change at any time
+(Use \`node --trace-warnings ...\` to show where the warning was created)
+Waiting for the debugger to disconnect...
+tests/tap/010-mock-console.ts
+  mock console
+    ✓ outLines is empty
+    ✓ errLines is empty
+    ✓ outLines has one entry
+    ✓ outLines is output
+    ✓ errLines is empty
+    ✓ outLines has 3 entries
+    ✓ outLines is abc
+    ✓ outLines is 123
+    ✓ errLines is empty
+    ✓ outLines has 4 entries
+    ✓ outLines is micro
+    ✓ errLines has one entry
+    ✓ errLines is error
+    ✓ errLines has 3 entries
+    ✓ errLines is def
+    ✓ errLines is 456
+    ✓ errLines has 4 entries
+    ✓ errLines is micro
+    ✓ outLines is empty
+    ✓ errLines is empty
+
+
+  20 passing (2s)
+
+`} </CodeBlock>
+

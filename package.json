@@ -1,7 +1,7 @@
 {
   "name": "@xpack/mock-console",
   "version": "0.1.0",
-  "description": "A generic mock console class",
+  "description": "A Node.js CommonJS/ES6 module with a mock console",
   "type": "commonjs",
   "exports": {
     "node": {
@@ -45,9 +45,11 @@
     "test-100-c8": "npm run test-tap-coverage-100-c8 -s",
     "dev-cycle": "npm run fix && npm run compile && npm run test-100-c8",
     "typedoc": "typedoc --logLevel Verbose",
+    "safari": "open -a Safari docs/index.html",
     "clean": "del-cli docs cjs 'tests/**/cjs' 'src/**/*.d.ts' 'src/**/*.d.ts.map' 'src/**/*.js' 'src/**/*.js.map' 'tests/**/*.d.ts' 'tests/**/*.d.ts.map' 'tests/**/*.js' 'tests/**/*.js.map' '**/tsconfig.tsbuildinfo' .nyc_output coverage",
     "deep-clean": "npm run clean && rm -rf node_modules package-lock.json",
-    "npm-version": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)"
+    "npm-version": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)",
+    "website-generate-commons": "bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh"
   },
   "repository": {
     "type": "git",
@@ -116,5 +118,11 @@
   },
   "engines": {
     "node": " >=16.0.0"
+  },
+  "websiteConfig": {
+    "name": "Mock Console",
+    "title": "mock-console - The xPack Mock Console",
+    "metadataDescription": "A Node.js CommonJS/ES6 module with a mock console",
+    "metadataKeywords": "xpm, xpack, build, test, dependencies, npm, reproducibility"
   }
 }

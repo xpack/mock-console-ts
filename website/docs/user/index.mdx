@@ -1,0 +1,75 @@
+---
+
+title: User Information
+description: User information, including the versioning scheme, usage of shared libraries, and RPATH configuration on GNU/Linux.
+keywords:
+  - xpack
+  - mock-console
+  - user
+  - versioning
+
+date: 2024-10-24 23:58:00 +0300
+
+---
+
+# How to use the xPack Mock Console
+
+This section is intended for those who plan to use this module in their
+own projects.
+
+The `@xpack/mock-console` module can be imported into both TypeScript
+and JavaScript Node.js code.
+
+In TypeScript and ECMAScript modules, use `import`:
+
+```typescript
+import { MockConsole } from '@xpack/mock-console'
+```
+
+In JavaScript with CommonJS, use `require()`:
+
+```javascript
+const { MockConsole } = request('@xpack/mock-console')
+```
+
+The module can be included in any application and the class can be used
+directly or a custom class can be derived from it for a custom behaviour.
+
+The typical use case is to create an instance of the `Logger` object,
+then log messages at different levels:
+
+```javascript
+const mockConsole = new MockConsole()
+
+const log = new Logger({
+  console: mockConsole,
+  level: 'info'
+})
+```
+
+The logged lines are available in the `outLines` and
+`errLines` public members:
+
+```javascript
+t.ok(mockConsole.outLines.length > 0, 'has stdout')
+t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
+
+t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
+```
+
+For debug purposes, there is also a function that can be used to display
+string arrays with the lines prefixed by a line number; this is useful
+in tests to decide what lines to check:
+
+```javascript
+import { dumpLines } from '@xpack/mock-console'
+
+dumpLines(mockConsole.outLines)
+```
+
+### Reference
+
+For more details on the available class definitions, including all methods,
+accessors, properties, etc,
+please see the TypeDoc
+[API](/docs/api/) pages.
