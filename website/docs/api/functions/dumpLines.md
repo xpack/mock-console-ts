@@ -1,14 +1,14 @@
 # Function: dumpLines()
 
-> **dumpLines**(`lines`?): `void`
+> **dumpLines**(`lines`?: `string`[]): `void`
 
-Dump numbered lines
+Dump lines from array to console.
 
 ## Parameters
 
-• **lines?**: `string`[]
-
-An array of strings.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `lines`? | `string`[] | An array of strings. |
 
 ## Returns
 
@@ -16,7 +16,8 @@ An array of strings.
 
 ## Remarks
 
-Dump the content of the array, one line at a time, via `console.log()`.
+For debugging purposes, dump the content of the array,
+one line at a time, via `console.log()`.
 
 The lines are:
 - preceded by an empty line
@@ -52,4 +53,4 @@ The output looks like:
 
 ## Defined in
 
-[src/lib/utils.ts:67](https://github.com/xpack/mock-console-ts/blob/f31ba0e47affe9665e07a5f434c333f47bcd2a88/src/lib/utils.ts#L67)
+[utils.ts:68](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/utils.ts#L68)
