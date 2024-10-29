@@ -14,7 +14,6 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "generate-typedoc": "docusaurus generate-typedoc",
     "typecheck": "tsc",
-    "typedoc": "typedoc --logLevel Verbose",
     "npm-install": "npm install",
     "npm-outdated": "npm outdated"
   },
