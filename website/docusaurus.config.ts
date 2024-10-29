@@ -176,6 +176,18 @@ const config: Config = {
       'docusaurus-plugin-typedoc',
       {
          tsconfig: '../tsconfig.json',
+         entryPointStrategy: "resolve",
+         useCodeBlocks: false, // Nice, but confusing with examples
+         expandObjects: true,
+         expandParameters: true,
+         parametersFormat: "table",
+         indexFormat: "table",
+         interfacePropertiesFormat: "table",
+         classPropertiesFormat: "list", // "htmlTable" not, it may have examples
+         enumMembersFormat: "table",
+         typeDeclarationFormat: "table",
+         propertyMembersFormat: "table",
+         excludeExternals: true,
       }
     ],
 
