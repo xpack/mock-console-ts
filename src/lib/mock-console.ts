@@ -80,8 +80,8 @@ export class MockConsole extends Console {
   /**
    * Create a **MockConsole** instance.
    *
-   * The constructor creates the two writable streams configured to decode `utf-8`
-   * strings.
+   * The constructor creates the two writable streams configured to decode
+   * `utf-8` strings.
    *
    * @example
    * ```javascript
