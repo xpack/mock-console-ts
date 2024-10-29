@@ -26,23 +26,23 @@ import { Writable } from 'node:stream'
 
 // ============================================================================
 
+/** The type of a function to be used as callback. */
 type WritableCallback = (error?: Error | null | undefined) => void
 
 // https://nodejs.org/docs/latest-v16.x/api/console.html
 
 /**
  * The **MockConsole** class implements a
- *   Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
- *   that logs the messages to arrays.
+ * Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
+ * that, instead of passing the messages to an output device,
+ * stores them in internal arrays.
  *
- * @remarks
- * During tests, it is necessary to check the output of various
- * commands, and for this it is necessary to intercept the console
- * output.
+ * Rationale: During testing, it is essential to verify the output of
+ * various commands. To achieve this, the console output must be intercepted.
  *
- * This is done by constructing the `Console` object with two writable streams
- * which store the output into local arrays of strings, one line at a
- * time.
+ * This is accomplished by creating a `Console` object with two writable
+ * streams that capture the output into local arrays of strings, one line
+ * at a time.
  *
  * If the messages contain `/n`, they are split into separate lines.
  *
@@ -55,7 +55,7 @@ type WritableCallback = (error?: Error | null | undefined) => void
  */
 export class MockConsole extends Console {
   /**
-   * Array of strings with the lines written on `stdout`.
+   * An array of strings containing the lines written to `stdout`.
    *
    * @example
    * ```javascript
@@ -65,7 +65,7 @@ export class MockConsole extends Console {
    */
   public outLines: string[] = []
   /**
-   * Array of strings with the lines written on `stderr`.
+   * An array of strings containing the lines written to `stderr`.
    *
    * @example
    * ```javascript
@@ -80,10 +80,7 @@ export class MockConsole extends Console {
   /**
    * Create a **MockConsole** instance.
    *
-   * @remarks
-   * The constructor has no parameters.
-   *
-   * It creates the two writable streams configured to decode `utf-8`
+   * The constructor creates the two writable streams configured to decode `utf-8`
    * strings.
    *
    * @example
@@ -180,9 +177,6 @@ export class MockConsole extends Console {
   }
 
   /**
-   * Clear the console internal status
-   *
-   * @remarks
    * Clear the content of the internal arrays and the content of the
    * parent **Console**.
    *

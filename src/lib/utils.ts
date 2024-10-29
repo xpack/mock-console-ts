@@ -24,12 +24,13 @@
 // ============================================================================
 
 /**
- * Dump numbered lines
+ * Dump lines from array to console.
  *
  * @param lines An array of strings.
  *
  * @remarks
- * Dump the content of the array, one line at a time, via `console.log()`.
+ * For debugging purposes, dump the content of the array,
+ * one line at a time, via `console.log()`.
  *
  * The lines are:
  * - preceded by an empty line
