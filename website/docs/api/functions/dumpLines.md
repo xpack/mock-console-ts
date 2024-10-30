@@ -1,8 +1,17 @@
 # Function: dumpLines()
 
-> **dumpLines**(`lines`?: `string`[]): `void`
+```ts
+function dumpLines(lines?: string[]): void
+```
 
-Dump lines from array to console.
+For debugging purposes, dump the content of the array,
+one line at a time, via `console.log()`.
+
+In addition, the lines are:
+- preceded by an empty line
+- suffixed with the line number, to help finding the index
+to be used in the tests
+- quoted, to make clear the line last character.
 
 ## Parameters
 
@@ -13,17 +22,6 @@ Dump lines from array to console.
 ## Returns
 
 `void`
-
-## Remarks
-
-For debugging purposes, dump the content of the array,
-one line at a time, via `console.log()`.
-
-The lines are:
-- preceded by an empty line
-- suffixed with the line number, to help finding the index
-to be used in the tests
-- quoted, to make clear the line last character.
 
 ## Example
 
@@ -53,4 +51,4 @@ The output looks like:
 
 ## Defined in
 
-[utils.ts:68](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/utils.ts#L68)
+[utils.ts:65](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/utils.ts#L65)

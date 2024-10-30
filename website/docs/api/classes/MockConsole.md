@@ -1,9 +1,9 @@
 # Class: MockConsole
 
-The **MockConsole** class implements a
+The **MockConsole** class extends a
 Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
-that, instead of passing the messages to an output device,
-stores them in internal arrays.
+by capturing messages and storing them in internal arrays, rather
+than sending them to an output device.
 
 Rationale: During testing, it is essential to verify the output of
 various commands. To achieve this, the console output must be intercepted.
@@ -29,12 +29,14 @@ standard output and `errLines` for the standard error).
 
 ### new MockConsole()
 
-> **new MockConsole**(): [`MockConsole`](MockConsole.md)
+```ts
+new MockConsole(): MockConsole
+```
 
 Create a **MockConsole** instance.
 
-The constructor creates the two writable streams configured to decode `utf-8`
-strings.
+The constructor creates the two writable streams configured to decode
+`utf-8` strings.
 
 #### Returns
 
@@ -52,13 +54,15 @@ const mockConsole = new MockConsole()
 
 #### Defined in
 
-[mock-console.ts:91](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L91)
+[mock-console.ts:91](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L91)
 
 ## Properties
 
 ### outLines
 
-> **outLines**: `string`[] = `[]`
+```ts
+outLines: string[] = [];
+```
 
 An array of strings containing the lines written to `stdout`.
 
@@ -71,13 +75,15 @@ t.match(mockConsole.outLines[1], 'Multiple subcommands', 'has title')
 
 #### Defined in
 
-[mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L66)
+[mock-console.ts:66](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L66)
 
 ***
 
 ### errLines
 
-> **errLines**: `string`[] = `[]`
+```ts
+errLines: string[] = [];
+```
 
 An array of strings containing the lines written to `stderr`.
 
@@ -89,33 +95,39 @@ t.equal(mockConsole.errLines.length, 0, 'stderr is empty')
 
 #### Defined in
 
-[mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L75)
+[mock-console.ts:75](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L75)
 
 ***
 
 ### outBuffer
 
-> `protected` **outBuffer**: `string` = `''`
+```ts
+protected outBuffer: string = '';
+```
 
 #### Defined in
 
-[mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L77)
+[mock-console.ts:77](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L77)
 
 ***
 
 ### errBuffer
 
-> `protected` **errBuffer**: `string` = `''`
+```ts
+protected errBuffer: string = '';
+```
 
 #### Defined in
 
-[mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L78)
+[mock-console.ts:78](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L78)
 
 ## Methods
 
 ### clear()
 
-> **clear**(): `void`
+```ts
+clear(): void
+```
 
 Clear the content of the internal arrays and the content of the
 parent **Console**.
@@ -136,4 +148,4 @@ mockConsole.clear()
 
 #### Defined in
 
-[mock-console.ts:188](https://github.com/xpack/mock-console-ts/blob/3ae34f73f082b8088102422f160123b40779ff74/src/lib/mock-console.ts#L188)
+[mock-console.ts:188](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/mock-console.ts#L188)
