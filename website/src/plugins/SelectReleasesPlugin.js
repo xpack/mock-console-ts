@@ -32,15 +32,14 @@ export default async function SelectReleasesPlugin(context, options) {
       blogPosts.forEach(post => {
         // logger.info('SelectReleasesPlugin 3 ' + util.inspect(post.metadata.tags))
         post.metadata.tags.forEach(tag => {
-          if (tag.label === 'releases') {
+          if (tag.label.toLowerCase() === 'releases') {
             const permalink = post.metadata.permalink.endsWith('/') ?
                               post.metadata.permalink :
                               post.metadata.permalink + '/'
             // logger.info(permalink)
             releasesTable.push({
               title: post.metadata.title,
-              permalink,
-              downloadUrl: post.metadata.frontMatter['download_url']
+              permalink
             })
           }
         })

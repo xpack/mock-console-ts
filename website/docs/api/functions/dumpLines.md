@@ -49,4 +49,4 @@ The output looks like:
 
 ## Defined in
 
-[utils.ts:65](https://github.com/xpack/mock-console-ts/blob/3235262f8d80c25d0044a43ac705c2642b84520c/src/lib/utils.ts#L65)
+[utils.ts:65](https://github.com/xpack/mock-console-ts/blob/8af7427fca93699b315d4a7e03ae98bd4f5d7589/src/lib/utils.ts#L65)
