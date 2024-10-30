@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: npm --prefix website install
 
-      - name: Generate Doxygen
+      - name: Build the Docusaurus site
         run: npm --prefix website run build
 
       - name: Setup Pages
