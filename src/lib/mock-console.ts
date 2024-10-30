@@ -32,10 +32,10 @@ type WritableCallback = (error?: Error | null | undefined) => void
 // https://nodejs.org/docs/latest-v16.x/api/console.html
 
 /**
- * The **MockConsole** class implements a
+ * The **MockConsole** class extends a
  * Node.js [Console](https://nodejs.org/docs/latest-v16.x/api/console.html)
- * that, instead of passing the messages to an output device,
- * stores them in internal arrays.
+ * by capturing messages and storing them in internal arrays, rather
+ * than sending them to an output device.
  *
  * Rationale: During testing, it is essential to verify the output of
  * various commands. To achieve this, the console output must be intercepted.

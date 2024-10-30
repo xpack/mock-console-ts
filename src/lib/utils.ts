@@ -24,15 +24,10 @@
 // ============================================================================
 
 /**
- * Dump lines from array to console.
- *
- * @param lines An array of strings.
- *
- * @remarks
  * For debugging purposes, dump the content of the array,
  * one line at a time, via `console.log()`.
  *
- * The lines are:
+ * In addition, the lines are:
  * - preceded by an empty line
  * - suffixed with the line number, to help finding the index
  * to be used in the tests
@@ -63,6 +58,8 @@
  * '' // 9
  * 'Common options:' // 10
  * ```
+ *
+ * @param lines An array of strings.
  *
  */
 export const dumpLines = (lines?: string[]): void => {
