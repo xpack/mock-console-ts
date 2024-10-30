@@ -1,8 +1,6 @@
 # Function: dumpLines()
 
-```ts
-function dumpLines(lines?: string[]): void
-```
+> **dumpLines**(`lines`?: `string`[]): `void`
 
 For debugging purposes, dump the content of the array,
 one line at a time, via `console.log()`.
@@ -12,16 +10,6 @@ In addition, the lines are:
 - suffixed with the line number, to help finding the index
 to be used in the tests
 - quoted, to make clear the line last character.
-
-## Parameters
-
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `lines`? | `string`[] | An array of strings. |
-
-## Returns
-
-`void`
 
 ## Example
 
@@ -49,6 +37,16 @@ The output looks like:
 'Common options:' // 10
 ```
 
+## Parameters
+
+| Parameter | Type | Description |
+| :------ | :------ | :------ |
+| `lines`? | `string`[] | An array of strings. |
+
+## Returns
+
+`void`
+
 ## Defined in
 
-[utils.ts:65](https://github.com/xpack/mock-console-ts/blob/07545016a876fb1bb44a9b3e656a789d447ebb5e/src/lib/utils.ts#L65)
+[utils.ts:65](https://github.com/xpack/mock-console-ts/blob/3235262f8d80c25d0044a43ac705c2642b84520c/src/lib/utils.ts#L65)

@@ -175,19 +175,25 @@ const config: Config = {
     [
       'docusaurus-plugin-typedoc',
       {
-         tsconfig: '../tsconfig.json',
-         entryPointStrategy: "resolve",
-         useCodeBlocks: true, // Nice, but it might be mistaken for examples.
-         expandObjects: true,
-         expandParameters: true,
-         parametersFormat: "table",
-         indexFormat: "table",
-         interfacePropertiesFormat: "table",
-         classPropertiesFormat: "list", // "htmlTable" not, it may have examples
-         enumMembersFormat: "table",
-         typeDeclarationFormat: "table",
-         propertyMembersFormat: "table",
-         excludeExternals: true,
+        // https://typedoc-plugin-markdown.org/docs/options#display-options
+        blockTagsPreserveOrder: [ "@example" ],
+        classPropertiesFormat: "list", // "table" not, it may have examples
+        entryPointStrategy: "resolve",
+        enumMembersFormat: "table",
+        excludeExternals: true,
+        excludeInternal: true,
+        expandObjects: true,
+        expandParameters: true,
+        indexFormat: "table",
+        interfacePropertiesFormat: "list", // "table" not, it may have examples
+        parametersFormat: "table",
+        propertyMembersFormat: "table",
+        tsconfig: '../tsconfig.json',
+        "tableColumnSettings": {
+          "leftAlignHeaders": true
+        },
+        typeDeclarationFormat: "table",
+        useCodeBlocks: false, // Nice, but it might be mistaken for examples.
       }
     ],
 
