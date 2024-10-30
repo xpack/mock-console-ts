@@ -177,7 +177,7 @@ const config: Config = {
       {
          tsconfig: '../tsconfig.json',
          entryPointStrategy: "resolve",
-         useCodeBlocks: false, // Nice, but confusing with examples
+         useCodeBlocks: true, // Nice, but it might be mistaken for examples.
          expandObjects: true,
          expandParameters: true,
          parametersFormat: "table",
