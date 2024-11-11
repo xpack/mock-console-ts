@@ -55,5 +55,14 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "websiteConfig": {
+    "longName": "xPack Mock Console",
+    "title": "mock-console - The xPack Mock Console",
+    "metadataDescription": "A Node.js CommonJS/ES6 module with a mock console",
+    "metadataKeywords": "xpm, xpack, build, test, dependencies, npm, reproducibility",
+    "hasApi": "true",
+    "has100coverage": "true",
+    "nodeVersion": "18.20.4"
   }
 }
