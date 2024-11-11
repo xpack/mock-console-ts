@@ -85,7 +85,7 @@
     "tap-mocha-reporter": "^5.0.4",
     "ts-node": "^10.9.2",
     "ts-standard": "^12.0.2",
-    "typedoc": "^0.26.10",
+    "typedoc": "^0.26.11",
     "typescript": "^4.9.5",
     "json": "^11.0.0",
     "liquidjs": "^10.18.0"
@@ -93,13 +93,12 @@
   "bundledDependencies": [],
   "tap": {
     "files": [
-      "tests/tap/*.js",
       "tests/tap/*.ts"
     ],
     "node-arg": [
       "--loader=ts-node/esm"
     ],
-    "reporter": "tap-mocha-reporter",
+    "reporter": "classic",
     "timeout": 30,
     "check-coverage": false,
     "coverage": false,
