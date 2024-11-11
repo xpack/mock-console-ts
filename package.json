@@ -16,17 +16,18 @@
   "types": "./cjs/index.d.ts",
   "scripts": {
     "compile-watch": "tsc --build --verbose --watch src",
-    "fix": "ts-standard --fix src tests && standard esm",
     "compile": "tsc --build --verbose src",
+    "fix": "ts-standard --fix src tests && standard esm",
+    "dev-cycle": "npm run fix && npm run compile && npm run test-100-c8",
     "npm-install": "npm install",
-    "npm-link": "npm link",
     "npm-link-deps": "npm link @xpack/docusaurus-template-liquid @xpack/node-modules-helper",
     "npm-outdated": "npm outdated",
     "npm-update": "npm update",
     "npm-version-patch": "npm version patch",
     "npm-version-minor": "npm version minor",
-    "postversion": "git push origin --all && git push origin --tags",
     "npm-pack": "npm pack",
+    "npm-link": "npm link",
+    "postversion": "git push origin --all && git push origin --tags",
     "git-log": "git log --pretty='%cd * %h %s' --date=short",
     "lint": "ts-standard src && standard esm",
     "prepare": "npm run compile && npm run lint",
@@ -43,10 +44,13 @@
     "test": "npm run test-tap -s",
     "test-100": "npm run test-tap-coverage-100 -s",
     "test-100-c8": "npm run test-tap-coverage-100-c8 -s",
-    "dev-cycle": "npm run fix && npm run compile && npm run test-100-c8",
+    "test-ci": "npm run test-100-c8",
+    "prepublishOnly": "npm run lint && npm run test-tap -s",
+    "postpublish": "git push origin --follow-tags",
+    "dumpconf": "env | sort | uniq",
+    "show-versions": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)",
     "clean": "del-cli cjs 'tests/**/cjs' 'src/**/*.d.ts' 'src/**/*.d.ts.map' 'src/**/*.js' 'src/**/*.js.map' 'tests/**/*.d.ts' 'tests/**/*.d.ts.map' 'tests/**/*.js' 'tests/**/*.js.map' '**/tsconfig.tsbuildinfo' .nyc_output coverage",
     "deep-clean": "npm run clean && rm -rf node_modules package-lock.json",
-    "npm-version": "echo $(which node) $(node --version) && echo $(which npm) $(npm --version)",
     "generate-top-commons": "bash node_modules/@xpack/node-modules-helper/maintenance-scripts/generate-top-commons.sh",
     "create-website": "mkdir -p website && cd website && npm link @xpack/docusaurus-template-liquid @xpack/node-modules-helper && bash node_modules/@xpack/docusaurus-template-liquid/maintenance-scripts/generate-commons.sh"
   },
@@ -78,6 +82,7 @@
     "del-cli": "^6.0.0",
     "standard": "^17.1.2",
     "tap": "^16.3.10",
+    "tap-mocha-reporter": "^5.0.4",
     "ts-node": "^10.9.2",
     "ts-standard": "^12.0.2",
     "typedoc": "^0.26.10",
@@ -87,16 +92,17 @@
   },
   "bundledDependencies": [],
   "tap": {
-    "check-coverage": false,
-    "coverage": false,
     "files": [
+      "tests/tap/*.js",
       "tests/tap/*.ts"
     ],
     "node-arg": [
       "--loader=ts-node/esm"
     ],
-    "reporter": "classic",
+    "reporter": "tap-mocha-reporter",
     "timeout": 30,
+    "check-coverage": false,
+    "coverage": false,
     "ts": true
   },
   "eslintConfig": {
@@ -112,6 +118,7 @@
   },
   "ts-standard": {
     "ignore": [
+      "/website/",
       "**/*.d.ts",
       "**/*.js"
     ]
