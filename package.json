@@ -31,20 +31,12 @@
     "git-log": "git log --pretty='%cd * %h %s' --date=short",
     "lint": "ts-standard src && standard esm",
     "prepare": "npm run compile && npm run lint",
-    "pretest": "npm run lint",
-    "pretest-100": "npm run lint",
-    "pretest-100-c8": "npm run lint",
-    "tap": "tap --reporter=spec",
-    "tap-c8": "c8 tap --reporter=spec",
-    "test-tap": "tap",
-    "test-tap-coverage": "tap --coverage",
-    "test-tap-coverage-c8": "c8 -- tap",
-    "test-tap-coverage-100": "tap --coverage --100",
-    "test-tap-coverage-100-c8": "c8 --100 -- tap",
-    "test": "npm run test-tap -s",
-    "test-100": "npm run test-tap-coverage-100 -s",
-    "test-100-c8": "npm run test-tap-coverage-100-c8 -s",
-    "test-ci": "npm run test-100-c8",
+    "pretest-coverage": "npm run lint",
+    "pretest-no-coverage": "npm run lint",
+    "test-coverage": "tap --show-full-coverage",
+    "test-no-coverage": "tap --disable-coverage",
+    "tap": "tap --reporter=tap",
+    "test-ci": "npm run test-coverage",
     "prepublishOnly": "npm run lint && npm run test-tap -s",
     "postpublish": "git push origin --follow-tags",
     "dumpconf": "env | sort | uniq",
@@ -78,11 +70,9 @@
   "devDependencies": {
     "@types/node": "^18.11.9",
     "@types/tap": "^15.0.12",
-    "c8": "^7.13.0",
     "del-cli": "^6.0.0",
     "standard": "^17.1.2",
-    "tap": "^16.3.10",
-    "tap-mocha-reporter": "^5.0.4",
+    "tap": "^21.0.1",
     "ts-node": "^10.9.2",
     "ts-standard": "^12.0.2",
     "typedoc": "^0.26.11",
@@ -94,15 +84,7 @@
   "tap": {
     "files": [
       "tests/tap/*.ts"
-    ],
-    "node-arg": [
-      "--loader=ts-node/esm"
-    ],
-    "reporter": "classic",
-    "timeout": 30,
-    "check-coverage": false,
-    "coverage": false,
-    "ts": true
+    ]
   },
   "eslintConfig": {
     "rules": {
