@@ -20,7 +20,8 @@
     "fix": "ts-standard --fix src tests && standard esm",
     "dev-cycle": "npm run fix && npm run compile && npm run test-100-c8",
     "npm-install": "npm install",
-    "npm-link-deps": "npm link @xpack/docusaurus-template-liquid @xpack/node-modules-helper",
+    "npm-link-deps": "npm link @xpack/docusaurus-template-liquid",
+    "npm-link-helpers": "npm link @xpack/node-modules-helper @xpack/docusaurus-template-liquid",
     "npm-outdated": "npm outdated",
     "npm-update": "npm update",
     "npm-version-patch": "npm version patch",
@@ -84,7 +85,8 @@
   "tap": {
     "files": [
       "tests/tap/*.ts"
-    ]
+    ],
+    "reporter": "base"
   },
   "eslintConfig": {
     "rules": {
