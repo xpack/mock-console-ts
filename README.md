@@ -4,7 +4,7 @@
 
 # The xPack Mock Console
 
-A Node.js CommonJS/ES6 module with a mock console.
+A Node.js CommonJS/ES6 module with a mock console
 
 ## Project documentation
 
@@ -14,8 +14,8 @@ please refer to the
 
 ## Project source
 
-The source code of the current release is available
-on [GitHub tag v1.0.0 tree](https://github.com/xpack/mock-console-ts/tree/v1.0.0).
+The source code of the current release is available on
+[GitHub tag v1.0.0 tree](https://github.com/xpack/mock-console-ts/tree/v1.0.0).
 
 ## License
 
