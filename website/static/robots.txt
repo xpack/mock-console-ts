@@ -1,0 +1,7 @@
+Sitemap: https://xpack.github.io/mock-console-ts/sitemap.xml
+
+User-agent: *
+Disallow: /mock-console-ts/blog/archive/
+Disallow: /mock-console-ts/blog/authors/
+Disallow: /mock-console-ts/blog/page/
+Disallow: /mock-console-ts/blog/tags/
