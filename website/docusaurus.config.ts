@@ -348,19 +348,29 @@ const config: Config = {
           'aria-label': 'GitHub repository',
         },
         {
-          label: `v${customFields.releaseVersion}`,
+          type: 'dropdown',
+          href: 'https://github.com/xpack/mock-console-ts/',
+          position: 'right',
+          label: 'GitHub',
+          items: [
+            {
+              label: `mock-console-ts`,
+              href: `https://github.com/xpack/mock-console-ts/`,
+            },
+            {
+              label: 'xpack',
+              href: 'https://github.com/xpack/',
+            },
+            {
+              label: 'xpack-dev-tools',
+              href: 'https://github.com/xpack-dev-tools/',
+            },
+          ]
+        },
+        {
+          label: `${customFields.releaseVersion}`,
           position: 'right',
           href: `https://www.npmjs.com/package/@xpack/mock-console/v/${customFields.releaseVersion}`,
-        },
-        {
-          href: 'https://github.com/xpack/',
-          label: 'xpack',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/xpack-dev-tools/',
-          label: 'xpack-dev-tools',
-          position: 'right',
         },
       ],
     },
