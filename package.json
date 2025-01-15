@@ -106,7 +106,9 @@
       "**/*.js"
     ]
   },
-  "topConfig": {},
+  "topConfig": {
+    "longName": "xPack Mock Console"
+  },
   "engines": {
     "node": " >=18.0.0"
   }
