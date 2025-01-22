@@ -1,6 +1,6 @@
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack/mock-console-ts)](https://github.com/xpack/mock-console-ts/blob/master/package.json)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack/mock-console-ts)](https://github.com/xpack/mock-console-ts/releases)
-[![npm (scoped)](https://img.shields.io/npm/v/@xpack/mock-console.svg?color=blue)](https://www.npmjs.com/package/@xpack/mock-console/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack/mock-console?color=blue)](https://www.npmjs.com/package/@xpack/mock-console/)
 [![license](https://img.shields.io/github/license/xpack/mock-console-ts)](https://github.com/xpack/mock-console-ts/blob/master/LICENSE)
 
 # The xPack Mock Console
