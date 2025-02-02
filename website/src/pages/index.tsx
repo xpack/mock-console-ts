@@ -30,7 +30,8 @@ function HomepageHeader() {
       <HeadTitle title="Welcome to mock-console - The xPack Mock Console!" />
       <div className="container">
         <Heading as="h1" className="hero__title">{siteConfig.title}</Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">{siteConfig.tagline}
+        </p>
         <div className={styles.installWithCopy}>
           <InstallWithCopy>npm install @xpack/mock-console@1.0.0</InstallWithCopy>
         </div>
